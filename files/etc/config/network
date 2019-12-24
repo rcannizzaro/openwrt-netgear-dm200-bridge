@@ -23,9 +23,9 @@ config dsl 'dsl'
 
 config interface 'mgmt'
 	option type 'bridge'
-        option ifname 'eth0.2'
+        option ifname 'eth0.200'
         option proto 'static'
-        option ipaddr '172.16.2.250'
+        option ipaddr '192.168.3.2'
         option netmask '255.255.255.0'
 
 config device 'lan_dev'
@@ -40,7 +40,7 @@ config interface 'wan_adsl'
 
 config interface 'wan_vdsl'
         option type 'bridge'
-        option ifname 'eth0 dsl0.101'
+        option ifname 'eth0 dsl0.832'
         option proto 'none'
         option auto '0'	
 
