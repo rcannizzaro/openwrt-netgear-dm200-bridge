@@ -1,4 +1,3 @@
-
 config interface 'loopback'
 	option ifname 'lo'
 	option proto 'static'
@@ -17,16 +16,12 @@ config atm-bridge 'atm'
 
 config dsl 'dsl'
 	option annex 'a'
-	option xfer_mode 'mixed' 
-	option tone 'auto'
 	option firmware '/lib/firmware/dm200.bin'
 
 config interface 'mgmt'
 	option type 'bridge'
         option ifname 'eth0.200'
-        option proto 'static'
-        option ipaddr '192.168.3.2'
-        option netmask '255.255.255.0'
+        option proto 'dhcp'
 
 config device 'lan_dev'
 	option name 'eth0'
