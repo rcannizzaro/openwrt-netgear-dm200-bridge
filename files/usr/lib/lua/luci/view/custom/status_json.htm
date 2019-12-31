@@ -2,7 +2,6 @@
 	local fs = require "nixio.fs"
 	local ipc = require "luci.ip"
 	local util = require "luci.util"
-	local stat = require "luci.tools.status"
 	local ver = require "luci.version"
 
 	local sysinfo = luci.util.ubus("system", "info") or { }
