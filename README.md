@@ -4,7 +4,21 @@ Fork du projet : https://github.com/a1comms/openwrt-netgear-dm200-bridge
 
 ## Interface de gestion du modem
 
-Le firmware expose l'adresse IP 192.168.3.2 sur le VLAN eth0.200
+Le firmware récupère une adresse IP sur le VLAN eth0.200, prévoir donc un service DHCP de ce côté.
+
+Sinon modifier le fichier "files/etc/config/network" en remplaçant la ligne de l'interface "mgmt" :
+
+```
+        option proto 'dhcp'
+```
+
+par :
+
+```
+        option proto 'static'
+        option ipaddr '192.168.x.x'
+        option netmask '255.255.255.0'
+```
 
 ## Création de l'image
 
