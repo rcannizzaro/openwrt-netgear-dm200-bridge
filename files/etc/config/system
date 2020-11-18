@@ -8,7 +8,7 @@ config system
 config timeserver 'ntp'
 	option enabled '1'
 	option enable_server '0'
-	list server '192.168.3.1'
+	list server '172.16.2.254'
 
 config led 'led_dsl'
 	option name 'dsl'
